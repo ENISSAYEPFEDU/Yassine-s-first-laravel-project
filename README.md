@@ -64,7 +64,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 The vendor/ directory is not included in this repository because it contains all Composer dependencies and makes the project too heavy to upload (more than 50 MB).
 Instead, it is ignored by Git following Laravel’s default .gitignore rules.
-To restore it after cloning the project, simply run: composer install on your terminal (bash)
+To restore it after cloning the project, simply run: 
+    composer install on your terminal (bash)
 This will download and install all required dependencies into the vendor/ folder.
 
 
