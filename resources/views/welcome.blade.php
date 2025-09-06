@@ -6,7 +6,7 @@
     <title>Fruits mart</title>
 </head>
 <body>
-    <h1>Currently on work</h1>
+    <h1>Welcome</h1>
     <p>Click the button bellow to view list of fruits . </p>
     <a href= "/Fruits" class="btn" >
         Find fruits
