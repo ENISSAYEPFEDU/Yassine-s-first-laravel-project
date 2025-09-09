@@ -20,6 +20,7 @@
     <h2>Fruit details</h2>
     <p><strong>ID:</strong> {{ $fruit['id'] }}</p>
     <p><strong>Price:</strong> {{ $fruit['price'] }} IDR</p>
+    <p><strong>Stock:</strong> {{ $fruit['Stock'] }} Kg</p>
 
     <a href="/Fruits">← Back to list</a>
 </body>
