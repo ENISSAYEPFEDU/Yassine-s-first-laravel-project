@@ -2,23 +2,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits are very healthyyy</title>
+    <title>Fruits list</title>
 </head>
 <body>
     <h1>Currently available fruits </h1>
     <p>{{  $greetings  }}</p>
 
+
+
     <ul>
-        <li>
-            <a href="Fruits/{{  $Fruits[0] ["id"]  }}" > 
-                {{ $Fruits[0] ["name"]  }}
-            </a>
-        </li>
-        <li>
-            <a href="Fruits/{{  $Fruits[1] ["id"]  }}" > 
-                {{ $Fruits[1] ["name"]  }}
-            </a>
-        </li>
+        @foreach ($Fruits as $Fruit )
+            <li>
+                <p> {{$Fruit['name']}} </p>
+                <a href= "Fruits/ {{ $Fruit['id'] }}" > View details </a>
+
+            </li>
+            
+            
+        @endforeach
+
+        
+
 
     </ul>
 </body>
