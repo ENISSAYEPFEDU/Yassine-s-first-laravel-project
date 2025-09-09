@@ -11,19 +11,12 @@
 
 
     <ul>
-        @foreach ($Fruits as $Fruit )
-            <li>
-                <p> {{$Fruit['name']}} </p>
-                <a href= "Fruits/ {{ $Fruit['id'] }}" > View details </a>
-
-            </li>
-            
-            
+        @foreach ($Fruits as $Fruit)
+        <li>
+            <p>{{ $Fruit['name'] }} </p>
+            <a href="/Fruits/{{ $Fruit['id'] }}">View details</a>
+        </li>
         @endforeach
-
-        
-
-
     </ul>
 </body>
 </html>
