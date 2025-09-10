@@ -19,12 +19,19 @@ Route::get('/Fruits', function () use ($Fruits) {
     ]);
 });
 
+Route::get('/Fruits/create', function () {
+    return view('Fruits.create');
+});
 Route::get('/Fruits/{id}', function ($id) use ($Fruits) {
     $fruit = collect($Fruits)->firstWhere('id', $id);
 
-    if (!$fruit) {
-        abort(404, 'Fruit not found');
-    }
+    // if (!$fruit) {
+    //     abort(404, 'Fruit not found');
+    // }
 
     return view('Fruits.show', ["fruit" => $fruit]);
+});
+
+Route::get('/', function () {
+    return view('welcome');
 });

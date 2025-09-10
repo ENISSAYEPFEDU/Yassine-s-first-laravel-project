@@ -1,12 +1,4 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits list</title>
-</head>
-
-<body>
+<x-layout>
     <h1>Currently available fruits </h1>
     <p>{{ $greetings }}</p>
 
@@ -20,7 +12,4 @@
             </li>
         @endforeach
     </ul>
-    <a href="/">← Back to home</a>
-</body>
-
-</html>
+</x-layout>
