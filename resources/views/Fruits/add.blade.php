@@ -1,10 +1,4 @@
-<html>
-
-<head>
-    <title>Add a new Fruit</title>
-</head>
-
-<body>
+<x-layout>
     <h2>Add a new Fruit</h2>
 
     <form>
@@ -19,8 +13,4 @@
 
         <button type="submit">Save</button>
     </form>
-
-    <a href="/Fruits">← Back to list</a>
-</body>
-
-</html>
+</x-layout>

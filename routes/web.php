@@ -19,8 +19,9 @@ Route::get('/Fruits', function () use ($Fruits) {
     ]);
 });
 
-Route::get('/Fruits/create', function () {
-    return view('Fruits.create');
+
+Route::get('/Fruits/aa', function () {
+    return view('Fruits.add');
 });
 Route::get('/Fruits/{id}', function ($id) use ($Fruits) {
     $fruit = collect($Fruits)->firstWhere('id', $id);
@@ -30,8 +31,4 @@ Route::get('/Fruits/{id}', function ($id) use ($Fruits) {
     // }
 
     return view('Fruits.show', ["fruit" => $fruit]);
-});
-
-Route::get('/', function () {
-    return view('welcome');
 });
