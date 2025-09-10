@@ -16,8 +16,8 @@ Route::get('/Fruits', function () {
 });
 
 
-Route::get('/Fruits/add', function () {
-    return view('welcome');
+Route::get('/Fruits/create', function () {
+    return view('Fruits.create');
 });
 
 Route::get('/Fruits/{id}', function ($id) {
