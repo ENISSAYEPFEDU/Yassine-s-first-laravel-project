@@ -17,7 +17,9 @@ class FruitFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->word(),
+            'Price' => fake()->numberBetween(1000, 50000),
+            'bio' => fake()->realText(),
         ];
     }
 }
