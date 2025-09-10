@@ -1,4 +1,8 @@
-<div class="card">
-    <h2>{{ $slot }}</h2>
-    <a href="" class= "btn">View details</a>
+@props(['highlight' => false])
+
+<div @class(['highlight' => $highlight, 'card'])>
+    {{ $slot }}
+    <a {{ $attributes }} class= "btn">
+        View details
+    </a>
 </div>

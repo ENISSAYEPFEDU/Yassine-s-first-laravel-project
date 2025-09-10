@@ -7,8 +7,9 @@
     <ul>
         @foreach ($Fruits as $Fruit)
             <li>
-                <p>{{ $Fruit['name'] }} </p>
-                <a href="/Fruits/{{ $Fruit['id'] }}">View details</a>
+                <x-card href="/Fruits/{{ $Fruit['id'] }}" :highlight="$Fruit['price'] > 16000">
+                    <h3> {{ $Fruit['name'] }} </h3>
+                </x-card>
             </li>
         @endforeach
     </ul>
