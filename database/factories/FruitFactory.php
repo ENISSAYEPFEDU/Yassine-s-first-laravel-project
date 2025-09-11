@@ -18,7 +18,7 @@ class FruitFactory extends Factory
     {
         return [
             'name' => fake()->word(),
-            'Price' => fake()->numberBetween(1000, 50000),
+            'price' => fake()->numberBetween(1000, 50000),
             'bio' => fake()->realText(),
         ];
     }

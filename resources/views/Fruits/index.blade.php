@@ -1,6 +1,5 @@
 <x-layout>
     <h1>Currently available fruits </h1>
-    <p>{{ $greetings }}</p>
 
 
 
