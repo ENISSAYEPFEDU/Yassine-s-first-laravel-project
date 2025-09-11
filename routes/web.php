@@ -9,12 +9,6 @@ Route::get('/', function () {
 
 Route::get('/Fruits', [FruitController::class, 'index']);
 
+Route::get('/Fruits/create', [FruitController::class, 'create']);
 
-Route::get('/Fruits/create', function () {
-    return view('Fruits.create');
-});
-
-Route::get('/Fruits/{id}', function ($id) {
-
-    return view('Fruits.show', ["id" => $id]);
-});
+Route::get('/Fruits/{id}', [FruitController::class, 'show']);

@@ -14,16 +14,18 @@ class FruitController extends Controller
         return view('Fruits.index', ["Fruits" => $Fruits]);
     }
 
+
     public function show($id)
     {
-        // route --> /Fruits/{id}
-        // fetch a single record & pass into show view
+        $fruit = Fruit::findOrFail($id);
+        return view('Fruits.show', ["fruit" => $fruit]);
     }
+
 
     public function create()
     {
         // route --> /Fruits/create
-        // render a create view (with web form) to users
+        return view('Fruits.create');
     }
 
     public function store()
