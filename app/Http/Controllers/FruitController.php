@@ -10,7 +10,7 @@ class FruitController extends Controller
     public function index()
     {
         // route --> /Fruits/
-        $Fruits = Fruit::orderBy('created_at', 'desc')->get();
+        $Fruits = Fruit::orderBy('created_at', 'desc')->paginate(10);
         return view('Fruits.index', ["Fruits" => $Fruits]);
     }
 

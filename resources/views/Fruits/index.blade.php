@@ -12,4 +12,6 @@
             </li>
         @endforeach
     </ul>
+
+    {{ $Fruits->links() }}
 </x-layout>
