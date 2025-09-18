@@ -7,8 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Fruits', [FruitController::class, 'index']);
-
-Route::get('/Fruits/create', [FruitController::class, 'create']);
-
-Route::get('/Fruits/{id}', [FruitController::class, 'show']);
+Route::get('/Fruits', [FruitController::class, 'index'])->name('Fruits.index');
+Route::get('/Fruits/create', [FruitController::class, 'create'])->name('Fruits.create');
+Route::get('/Fruits/{id}', [FruitController::class, 'show'])->name('Fruits.show');

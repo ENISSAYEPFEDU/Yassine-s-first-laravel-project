@@ -13,7 +13,8 @@
     <header>
         <nav>
             <h1>Fruit mart</h1>
-            <a href = "/Fruits/create"> Add a new Fruits </a>
+            <a href = "{{ route('Fruits.index') }}"> All Fruits </a>
+            <a href = "{{ route('Fruits.create') }}"> Add a new Fruits </a>
             <a href="/">← Back to home</a>
         </nav>
     </header>

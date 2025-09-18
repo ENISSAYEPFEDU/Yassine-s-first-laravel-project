@@ -6,7 +6,7 @@
     <ul>
         @foreach ($Fruits as $Fruit)
             <li>
-                <x-card href="/Fruits/{{ $Fruit->id }}" :highlight="$Fruit->price > 16000">
+                <x-card href="{{ route('Fruits.show', $Fruit->id) }}" :highlight="$Fruit->price > 16000">
                     <h3>{{ $Fruit->name }}</h3>
                 </x-card>
             </li>
