@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Catégorie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,6 +21,7 @@ class FruitFactory extends Factory
             'name' => fake()->word(),
             'price' => fake()->numberBetween(1000, 50000),
             'bio' => fake()->realText(),
+            'catégorie_id' => Catégorie::inRandomOrder()->first()->id,
         ];
     }
 }

@@ -5,6 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Fruit;
 
+/*
+|-----------------ninjas---------------------|
+| id   | name    | bio    |  Catégorie_id    |
+|------|---------|--------|------------------|
+| 01   | Orange  | blah   |     03           |
+| 02   | Banana  | blah   |     02           |
+| 03   | peach   | blah   |     03           |
+| 04   | apple   | blah   |     03           |
+|--------------------------------------------|
+
+|-----------------dojos---------------|
+| id   | name    | loc     | desc     |
+|------|---------|---------|----------|
+| 01   | abc     | UK      | blah     |
+| 02   | def     | Spain   | blah     |
+| 03   | ghi     | Japan   | blah     |
+|-------------------------------------|
+*/
+
 class FruitController extends Controller
 {
     public function index()
