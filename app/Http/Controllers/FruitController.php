@@ -29,14 +29,14 @@ class FruitController extends Controller
     public function index()
     {
         // route --> /Fruits/
-        $Fruits = Fruit::orderBy('created_at', 'desc')->paginate(10);
+        $Fruits = Fruit::with('Catégorie')->orderBy('created_at', 'desc')->paginate(10);
         return view('Fruits.index', ["Fruits" => $Fruits]);
     }
 
 
     public function show($id)
     {
-        $fruit = Fruit::findOrFail($id);
+        $fruit = Fruit::with('Catégorie')->findOrFail($id);
         return view('Fruits.show', ["fruit" => $fruit]);
     }
 

@@ -10,4 +10,10 @@ class Catégorie extends Model
     protected $fillable = ['name', 'location', 'description'];
     /** @use HasFactory<\Database\Factories\CatégorieFactory> */
     use HasFactory;
+
+
+    public function fruits()
+    {
+        return $this->hasMany(Fruit::class);
+    }
 }

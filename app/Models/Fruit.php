@@ -10,4 +10,10 @@ class Fruit extends Model
     protected $fillable = ['name', 'price', 'bio'];
     /** @use HasFactory<\Database\Factories\FruitFactory> */
     use HasFactory;
+
+
+    public function catégorie()
+    {
+        return $this->belongsTo(Catégorie::class);
+    }
 }
