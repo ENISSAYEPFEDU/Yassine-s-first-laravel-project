@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Catégorie;
 use App\Models\Fruit;
 
 /*
@@ -44,7 +45,10 @@ class FruitController extends Controller
     public function create()
     {
         // route --> /Fruits/create
-        return view('Fruits.create');
+
+        $Catégories = Catégorie::all();
+
+        return view('Fruits.create', ["Catégories" => $Catégories]);
     }
 
     public function store()
