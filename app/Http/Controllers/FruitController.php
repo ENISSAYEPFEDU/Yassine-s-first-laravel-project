@@ -61,7 +61,7 @@ class FruitController extends Controller
             'price' => 'required|numeric|min:0|max:50000',
         ]);
         Fruit::create($validated);
-        return redirect()->route('Fruits.index');
+        return redirect()->route('Fruits.index')->with('success', 'Fruit created successfully.');
     }
 
     public function destroy($id)
@@ -69,7 +69,7 @@ class FruitController extends Controller
         // --> /Fruits/{id} (DELETE)
         $fruit = Fruit::findOrFail($id);
         $fruit->delete();
-        return redirect()->route('Fruits.index');
+        return redirect()->route('Fruits.index')->with('success', 'Fruit Deleted successfully.');
     }
 
     // edit() and update() for edit view and update requests
