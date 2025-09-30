@@ -7,7 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('/Fruits', [FruitController::class, 'index'])->name('Fruits.index');
 Route::get('/Fruits/create', [FruitController::class, 'create'])->name('Fruits.create');
-Route::get('/Fruits/{id}', [FruitController::class, 'show'])->name('Fruits.show');
 Route::post('/Fruits', [FruitController::class, 'store'])->name('Fruits.store');
+Route::get('/Fruits/{id}', [FruitController::class, 'show'])->name('Fruits.show');
+Route::delete('/Fruits/{id}', [FruitController::class, 'destroy'])->name('Fruits.destroy');

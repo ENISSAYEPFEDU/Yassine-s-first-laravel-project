@@ -67,7 +67,9 @@ class FruitController extends Controller
     public function destroy($id)
     {
         // --> /Fruits/{id} (DELETE)
-        // handle delete request to delete a ninja record from table
+        $fruit = Fruit::findOrFail($id);
+        $fruit->delete();
+        return redirect()->route('Fruits.index');
     }
 
     // edit() and update() for edit view and update requests

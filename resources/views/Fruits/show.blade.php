@@ -15,4 +15,11 @@
         <p><strong>About the Catégorie:</strong></p>
         <p>{{ $fruit->catégorie->description }}</p>
     </div>
+
+    <form action="{{ route('Fruits.destroy', $fruit->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn my-4">Delete Fruit</button>
+    </form>
+
 </x-layout>
