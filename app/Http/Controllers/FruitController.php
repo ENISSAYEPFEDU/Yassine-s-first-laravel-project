@@ -56,7 +56,7 @@ class FruitController extends Controller
         // --> /Fruits/ (POST)
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'bio' => 'required|string|min:1|max:1000',
+            'bio' => 'required|string|min:20|max:1000',
             'catégorie_id' => 'required|exists:catégories,id',
             'price' => 'required|numeric|min:0|max:50000',
         ]);
