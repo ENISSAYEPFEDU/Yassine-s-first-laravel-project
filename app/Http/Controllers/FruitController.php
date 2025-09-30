@@ -64,10 +64,9 @@ class FruitController extends Controller
         return redirect()->route('Fruits.index')->with('success', 'Fruit created successfully.');
     }
 
-    public function destroy($id)
+    public function destroy(Fruit $fruit)
     {
         // --> /Fruits/{id} (DELETE)
-        $fruit = Fruit::findOrFail($id);
         $fruit->delete();
         return redirect()->route('Fruits.index')->with('success', 'Fruit Deleted successfully.');
     }
