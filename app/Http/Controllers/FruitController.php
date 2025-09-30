@@ -51,10 +51,17 @@ class FruitController extends Controller
         return view('Fruits.create', ["Catégories" => $Catégories]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
         // --> /Fruits/ (POST)
-        // hanlde POST request to store a new ninja record in table
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'bio' => 'required|string|min:1|max:1000',
+            'catégorie_id' => 'required|exists:catégories,id',
+            'price' => 'required|numeric|min:0|max:50000',
+        ]);
+        Fruit::create($validated);
+        return redirect()->route('Fruits.index');
     }
 
     public function destroy($id)

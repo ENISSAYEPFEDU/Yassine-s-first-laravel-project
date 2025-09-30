@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fruit extends Model
 {
-    protected $fillable = ['name', 'price', 'bio'];
+    protected $fillable = ['name', 'price', 'bio', 'catégorie_id'];
     /** @use HasFactory<\Database\Factories\FruitFactory> */
     use HasFactory;
 

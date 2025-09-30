@@ -1,5 +1,5 @@
 <x-layout>
-    <form action="" method="">
+    <form action="{{ route('Fruits.store') }}" method="POST">
 
         @csrf
 
@@ -10,7 +10,7 @@
         <input type="text" id="name" name="name" required>
 
         <!-- Fruit Price -->
-        <label for="price">Fruit Price (0-50000):</label>
+        <label for="price">Fruit Price (0-50000 IDR):</label>
         <input type="number" id="price" name="price" required>
 
         <!-- Fruit Description -->

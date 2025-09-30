@@ -10,3 +10,4 @@ Route::get('/', function () {
 Route::get('/Fruits', [FruitController::class, 'index'])->name('Fruits.index');
 Route::get('/Fruits/create', [FruitController::class, 'create'])->name('Fruits.create');
 Route::get('/Fruits/{id}', [FruitController::class, 'show'])->name('Fruits.show');
+Route::post('/Fruits', [FruitController::class, 'store'])->name('Fruits.store');
