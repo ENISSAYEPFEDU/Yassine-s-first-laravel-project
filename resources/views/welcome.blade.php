@@ -19,6 +19,28 @@
     <a href= "/Fruits" class="btn mt-4 inline-block ">
         Find fruits
     </a>
+    {{-- Auth links --}}
+    <div class="mt-8 flex justify-center gap-4">
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ url('/dashboard') }}" class="btn">
+                    Dashboard
+                </a>
+            @else
+                <a href="{{ route('login') }}" class="btn">
+                    Log in
+                </a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="btn">
+                        Register
+                    </a>
+                @endif
+            @endauth
+        @endif
+    </div>
+
+
 </body>
 
 </html>
