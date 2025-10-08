@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FruitController;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,4 +19,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+/* === Fruits Routes === */
+
+Route::get('/Fruits', [FruitController::class, 'index'])->name('Fruits.index');
+Route::get('/Fruits/create', [FruitController::class, 'create'])->name('Fruits.create');
+Route::post('/Fruits', [FruitController::class, 'store'])->name('Fruits.store');
+Route::get('/Fruits/{id}', [FruitController::class, 'show'])->name('Fruits.show');
+Route::delete('/Fruits/{fruit}', [FruitController::class, 'destroy'])->name('Fruits.destroy');
+
+require __DIR__ . '/auth.php';
